@@ -1,4 +1,47 @@
-
+html{
+    background-image: url("../images/fondoIndex.jpg");
+    background-repeat: no-repeat;
+}
 #myContainer{
+    margin-top:70px;
     text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: hotpink;
+}
+form{
+    margin: 400px;
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+    border: teal 2px solid;
+    border-radius: 4px;
+    background-color: mistyrose;
 }

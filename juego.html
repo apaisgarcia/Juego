@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -9,31 +8,24 @@
     <link rel="stylesheet" href="css/normalised.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
+    <script src="script/p5.js"></script>
+    <script src="script/p5.play.js"></script>
+    <script src="script/p5.sound.js"></script>
+    <script src="script/player.js"></script>
+    <script src="script/bola.js"></script>
+    <script src="script/juego.js"></script>
+
+</head>
 <body>
 <ul>
-    <li><a class="active" href="#home">Home</a></li>
+    <li><a class="active" href="index.html">Home</a></li>
     <li><a href="juego.html">Juego</a></li>
     <li><a href="navegador.html">Información Navegador</a></li>
 </ul>
-<form   action=" ">
-    <label for="fname">Nombre:</label><br>
-    <input type="text" id="fname" name="fname" ><br>
-    <label for="lname">Apellido:</label><br>
-    <input type="text" id="lname" name="lname" ><br><br>
-
-
-    <p>Sexo:
-        <input type="radio" name="hm" value="h" required> Hombre
-        <input type="radio" name="hm" value="m" required> Mujer
-    </p>
-
-    <input type="submit" value="Enviar">
-
-</form>
-
+    <div id='myContainer'>
+    </div>
 <footer>
     <h3>Juego 2021 @Alia Pais</h3>
 </footer>
 </body>
-
 </html>
