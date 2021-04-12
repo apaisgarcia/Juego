@@ -1,10 +1,17 @@
 html{
-    background-image: url("../images/fondoIndex.jpg");
+
     background-repeat: no-repeat;
 }
+
 #myContainer{
-    margin-top:70px;
-    text-align: center;
+
+
+}
+
+#myContainer2{
+    float:left;
+
+
 }
 ul {
     list-style-type: none;
