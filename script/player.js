@@ -13,11 +13,11 @@ class Player {
 
         if (strPlayer=== "jugador1") {
 
-            this.spritePlayer= p.createSprite(100, 100);
+            this.spritePlayer= p.createSprite(300, 100);
             this.spritePlayer.addAnimation('run', 'images/assets/chico/walk/Run__000.png', 'images/assets/chico/walk/Run__008.png');
             this.spritePlayer.changeAnimation('run');
         }else if (strPlayer ==="jugador2") {
-            this.spritePlayer =p.createSprite(100, 650);
+            this.spritePlayer =p.createSprite(350, 750);
 
             this.spritePlayer.addAnimation('walk', 'images/assets/chica/walk/Run (1).png', 'images/assets/chica/walk/Run (8).png');
         //    this.spritePlayer.changeAnimation('walklento');
