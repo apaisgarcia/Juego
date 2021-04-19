@@ -36,6 +36,12 @@ const s = (p) => {
           //console.log("choco en laterales");
       }
 
+      bolita.collidePlayer(p, jug1);
+      bolita.collidePlayer(p, jug2);
+
+      jug1.spritePlayer.debug = p.mouseIsPressed;
+        jug2.spritePlayer.debug = p.mouseIsPressed;
+        bolita.spriteBola.debug = p.mouseIsPressed;
        /* if(bola.collideBorders();) 1 punto jugador1
         else if puntojugador2
         else seguimos*/

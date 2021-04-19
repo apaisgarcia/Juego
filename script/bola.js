@@ -44,6 +44,8 @@ class Bola{
         if ( this.spriteBola.position.x < (this.spriteBola.width/2) ){
             //borde derecho
             this.spriteBola.velocity.x = (this.spriteBola.velocity.x)*-1;
+
+            console.log("velocidad",this.speed);
            // angle =150;
            // this.spriteBola.setSpeed(this.speed,angle )
             return 0;
@@ -69,10 +71,19 @@ class Bola{
 
            // this.spriteBola.velocity.y =-3;
 
-
         }
+    }
+    collidePlayer(p, player){
+
+        this.spriteBola.collide( player.spritePlayer, retornarBola);
+
     }
 
 
 
+
+}
+function retornarBola( spritebola, spritejugador){
+    console.log("choque");
+    spritebola.velocity.y = (spritebola.velocity.y)*-1;
 }

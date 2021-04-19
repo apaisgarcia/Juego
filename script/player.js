@@ -16,6 +16,7 @@ class Player {
             this.spritePlayer= p.createSprite(300, 100);
             this.spritePlayer.addAnimation('run', 'images/assets/chico/walk/Run__000.png', 'images/assets/chico/walk/Run__008.png');
             this.spritePlayer.changeAnimation('run');
+            this.spritePlayer.setCollider("rectangle",-10,40,80, 40);
         }else if (strPlayer ==="jugador2") {
             this.spritePlayer =p.createSprite(350, 750);
 
@@ -23,7 +24,9 @@ class Player {
         //    this.spritePlayer.changeAnimation('walklento');
             this.spritePlayer.changeAnimation('walk');
             this.spritePlayer.animation.frameDelay= 13;
-           // this.spritePlayer.walk.= 1;
+            this.spritePlayer.setCollider("rectangle",10,-40,60, 40);
+
+            // this.spritePlayer.walk.= 1;
         } else {
             console.log('Jugador no valido');
         }
@@ -44,4 +47,5 @@ class Player {
             this.spritePlayer.position.x = this.spritePlayer.position.x + 5;
         }
     }
+
 }
