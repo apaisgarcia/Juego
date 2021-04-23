@@ -10,7 +10,7 @@ class Bola{
         this.spriteBola= p.createSprite(500,500);
         this.spriteBola.addAnimation('bola','images/assets/bola/bola2.png','images/assets/bola/bola5.png');
         this.spriteBola.changeAnimation('bola');
-
+        this.spriteBola.maxSpeed=10;
 
     }
 
@@ -73,12 +73,22 @@ class Bola{
 
         }
     }
-    collidePlayer(p, player){
+
+   collidePlayerXY(p, player){ //operación extra (ya funciona con collidPlayerAngle)
 
         this.spriteBola.collide( player.spritePlayer, retornarBola);
 
     }
+    collidePlayerAngle(player){
+        let speed=this.spriteBola.getSpeed();
+        speed = speed*1.05;
+        if( this.spriteBola.bounce(player.spritePlayer)){
+            this.spriteBola.setSpeed(speed,this.spriteBola.getDirection())
+        }
 
+
+
+    }
 
 
 

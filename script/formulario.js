@@ -1,22 +1,19 @@
 
+function comprobarSettings(){
 
-const v = (p) => {
+    let ArraySettings=[];
+
+    let numeroJugadores=document.getElementById("numeroJugadores").value;
+    let colorFondo=document.getElementById("colorFondo").value;
+    let dificultad=document.getElementById("dificultad").value;
+    let sonido=document.getElementById("sonido").value;
+
+    ArraySettings.push(false);
+    ArraySettings.push(numeroJugadores);
+    ArraySettings.push(colorFondo);
+    ArraySettings.push(dificultad);
+    ArraySettings.push(sonido);
 
 
-    p.preload = function () {
-
-
-    }
-    p.setup = function () {
-        p.createCanvas(350, 900);
-
-
-    }
-    p.draw = function () {
-        p.background('#fae');
-
-
-    }
+    console.log(" Array " ,ArraySettings);
 }
-
-var myp5 = new p5(v,'myContainer2');

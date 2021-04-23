@@ -36,8 +36,12 @@ const s = (p) => {
           //console.log("choco en laterales");
       }
 
-      bolita.collidePlayer(p, jug1);
-      bolita.collidePlayer(p, jug2);
+     // bolita.collidePlayerXY(p, jug1);
+    //  bolita.collidePlayerXY(p, jug2);
+
+        bolita.collidePlayerAngle(jug1);
+        bolita.collidePlayerAngle(jug2);
+
 
       jug1.spritePlayer.debug = p.mouseIsPressed;
         jug2.spritePlayer.debug = p.mouseIsPressed;
@@ -73,7 +77,7 @@ const s = (p) => {
 
 
 }
-var myp5 = new p5(s,'myContainer');
+var myp5 = new p5(s,'gameContainer');
 
 
 

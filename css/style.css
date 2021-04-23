@@ -3,16 +3,35 @@ html{
     background-repeat: no-repeat;
 }
 
-#myContainer{
 
-
-}
-
-#myContainer2{
-    float:left;
-
+.column {
+    float: left;
 
 }
+h2{
+    text-align: center;
+}
+/* Left and right column */
+.column.side {
+    width: 300px;
+    height: 900px;
+    background: antiquewhite;
+}
+
+/* Middle column */
+.column.middle {
+
+    background: palevioletred;
+    width: 700px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -43,7 +62,7 @@ li a:hover {
 .active {
     background-color: hotpink;
 }
-form{
+.formulario{
     margin: 400px;
     width: 800px;
     height: 500px;

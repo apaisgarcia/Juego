@@ -5,33 +5,87 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="html,cheatsheet"/>
-    <link rel="stylesheet" href="css/normalised.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/normalised.css" type="text/css"/>-->
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 
     <script src="script/p5.js"></script>
 
     <script src="script/p5.play.js"></script>
+
+    <script src="script/quicksettings.js" type="text/javascript"></script>
+    <script src="script/p5.gui.js" type="text/javascript"></script>
+
+
+
     <script src="script/player.js"></script>
     <script src="script/bola.js"></script>
+    <script src="script/formulario.js"></script>
+    <script src="script/marcador.js"></script>
     <script src="script/sketch.js"></script>
     <script src="script/p5.sound.js"></script>
-    <script src="script/formulario.js"></script>
+
 
 
 </head>
 <body>
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="juego.html">Juego</a></li>
-    <li><a href="navegador.html">Información Navegador</a></li>
-</ul>
+<header>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="navegador.html">Información Navegador</a></li>
+            </ul>
+</header>
+<main class="row">
+    <div  class = "column side">
+        <h2>FORMULARIO</h2>
+        <br>
+        <form>
+            <label >Número Jugadores:</label><br><br>
+            <select id= "numeroJugadores" name="OS">
+                <option value="0">Número Jugadores--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
 
-<div id='myContainer2'>
+            </select>
+            <br><br><hr><br>
+            <label >Color de Fondo:</label><br><br>
+            <select id="colorFondo" name="OS">
+                <option value="0">Color de Fondo --</option>
+                <option value="1">Verde</option>
+                <option value="2">Amarillo</option>
+
+            </select>
+            <br><br><hr><br>
+            <label >Nivel de Juego</label><br><br>
+            <select id="dificultad" name="OS">
+                <option value="0">Nivel de Juego --</option>
+                <option value="1">Fácil</option>
+                <option value="2">Medio</option>
+                <option value="3">Dificil</option>
+
+            </select>
+            <br><br><hr><br>
+            <label >Música / Sonido</label><br><br>
+            <select id="sonido" name="OS">
+                <option value="0">Música --</option>
+                <option value="1">--</option>
+                <option value="2">--</option>
 
 
-</div>
-    <div id='myContainer'>
+            </select>
+            <br><br><hr><br>
+            <button  onclick="comprobarSettings()" > Start Game </button>
+            <br><br><hr><br>
+        </form>
+
     </div>
+
+    <div id='gameContainer' class="column middle">
+    </div>
+    <div  class = "column side">
+        <h2>MARCADOR</h2>
+    </div>
+</main>
 <footer>
     <h3>Juego 2021 @Alia Pais</h3>
 </footer>
