@@ -1,7 +1,7 @@
-
+var ArraySettings=[];
 function comprobarSettings(){
 
-    let ArraySettings=[];
+
 
     let numeroJugadores=document.getElementById("numeroJugadores").value;
     let colorFondo=document.getElementById("colorFondo").value;
@@ -16,4 +16,6 @@ function comprobarSettings(){
 
 
     console.log(" Array " ,ArraySettings);
+
+
 }

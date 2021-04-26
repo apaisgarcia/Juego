@@ -33,7 +33,16 @@ class Player {
         }
 
     }
+    posicionInicial (strPlayer){
+        if (strPlayer=== "jugador1") {
+            this.spritePlayer.position.x = 300;
+            this.spritePlayer.position.y = 60;
+        }else if (strPlayer ==="jugador2") {
+            this.spritePlayer.position.x = 350;
+            this.spritePlayer.position.y = 830;
+        }
 
+    }
     moveLeft() {
         if(this.spritePlayer.position.x >this.spritePlayer.width/2) {
             this.spritePlayer.mirrorX(-1);

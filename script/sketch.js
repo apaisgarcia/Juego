@@ -1,14 +1,15 @@
+var jug1 ;
+var jug2;
+var bolita;
+var game;
 const s = (p) => {
-    var jug1 ;
-    var jug2;
-    var bolita;
-    var game;
+
 
     p.preload = function () {
 
         //Aquí sólo haremos un newGame
 
-       jug1 = new Player(p,"jugador1");
+        jug1 = new Player(p,"jugador1");
         jug2 = new Player(p,"jugador2");
         bolita=new Bola(p);  //VER ESTO
       //  game= new Game(p,2,10); // en un futuro haremos el new Game
@@ -20,17 +21,20 @@ const s = (p) => {
 
     }
     p.draw = function () {
+
         p.background(155);
 
         moverJugadores();
      //VER LO DE ABAJO
 
       if(bolita.collideBorder(p)===1){
-          jug1.points++;
-          console.log( "Puntuacion Jugador Uno" ,jug1.points);
-      }else if (bolita.collideBorder(p)===2){
           jug2.points++;
-         console.log("Puntación Jugador Dos",jug2.points);
+          reiniciarPunto()
+          console.log( "Puntuacion Jugador Uno" ,jug2.points);
+      }else if (bolita.collideBorder(p)===2){
+          jug1.points++;
+          reiniciarPunto();
+         console.log("Puntación Jugador Dos",jug1.points);
       }
       else if(bolita.collideBorder(p)===0){
           //console.log("choco en laterales");
@@ -43,7 +47,7 @@ const s = (p) => {
         bolita.collidePlayerAngle(jug2);
 
 
-      jug1.spritePlayer.debug = p.mouseIsPressed;
+        jug1.spritePlayer.debug = p.mouseIsPressed;
         jug2.spritePlayer.debug = p.mouseIsPressed;
         bolita.spriteBola.debug = p.mouseIsPressed;
        /* if(bola.collideBorders();) 1 punto jugador1
@@ -55,7 +59,14 @@ const s = (p) => {
 
 
     }
+    function reiniciarPunto(){
+        p.noLoop();
+        jug1.posicionInicial('jugador1');
+        jug2.posicionInicial('jugador2');
+        bolita.empezarJuego(p);
+        p.loop();
 
+    }
     function moverJugadores() {
         if (p.keyIsDown(p.RIGHT_ARROW)){
             console.log("voy a la derecha");
