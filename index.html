@@ -18,12 +18,21 @@
     <li><a onclick="propiedades()">Información Navegador</a></li>
     <li><a onclick="autor()">Información Autor</a></li>
 </ul>
-<form  class="formulario"  name="fvalida">
 
+<h1>Vamos a Jugar a PONG</h1>
+
+<form  class="formulario"  name="fvalida">
+    <h2>Formulario de Entrada</h2>
     <label for="name">Nombre:</label><br><br>
     <input type="text" id="name" name="name" ><br><br>
     <label for="surname">Apellido:</label><br><br>
     <input type="text" id="surname" name="surname"><br><br>
+
+    <label for="edad">Edad:</label><br><br>
+    <input type="text" id="edad" name="edad" size="3" maxlength="3"><br><br>
+    <label for="nif">NIF:</label><br><br>
+    <input type="text" id="nif" name="nif" ><br><br>
+
     <label for="email">Correo Electrónico:</label><br><br>
     <input type="text" id="email" name="email" ><br><br>
     <input type="button"value="Enviar" onclick="valida_envia()">

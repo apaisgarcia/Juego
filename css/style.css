@@ -2,7 +2,14 @@ html{
 
     background: black;
 }
-
+h1{
+    text-align: center;
+    color: rgba(255,255,255,.3);
+    background: #1a1a1a;
+    text-shadow: 0 0 20px rgba(255,255,255,.5), 0 0 20px rgba(255,255,255,.5);
+    height: 35px;
+    padding:15px;
+}
 
 .column {
     float: left;
@@ -64,12 +71,14 @@ li a:hover {
 .active {
     background-color: hotpink;
 }
-.formulario{
-    margin: 300px;
+form.formulario{
+    margin-left: 600px;
+    margin-top:300px;
     width: 800px;
     height: 500px;
     padding: 20px;
     border: teal 2px solid;
     border-radius: 4px;
     background-color: mistyrose;
+    text-align: center;
 }
