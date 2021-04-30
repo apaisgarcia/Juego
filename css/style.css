@@ -15,7 +15,8 @@ h2{
 .column.side {
     width: 300px;
     height: 900px;
-    background: antiquewhite;
+    background: lightslategrey;
+    color: white;
 
 }
 

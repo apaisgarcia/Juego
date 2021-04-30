@@ -10,7 +10,7 @@ const r = (p) => {
 
     }
     p.draw = function () {
-    p.background(51);
+    p.background(61);
     p.textSize(32);
     p.fill(255);
     p.text("MARCADOR", 65, 80);
