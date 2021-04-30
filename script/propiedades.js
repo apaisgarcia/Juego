@@ -48,3 +48,9 @@ function autor() {
     );
 
 }
+function cformulario() {
+    alert(
+        "Debes cubrir el formulario para entrar en el Juego" + "\n"
+    );
+
+}
