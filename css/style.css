@@ -1,6 +1,6 @@
 html{
 
-    background-repeat: no-repeat;
+    background: black;
 }
 
 
@@ -65,7 +65,7 @@ li a:hover {
     background-color: hotpink;
 }
 .formulario{
-    margin: 400px;
+    margin: 300px;
     width: 800px;
     height: 500px;
     padding: 20px;

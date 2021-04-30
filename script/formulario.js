@@ -5,16 +5,17 @@ export var numeroPuntos;
 export var colorFondo;
 export var dificultad;
 export var sonido;
-var fname;
-var lname;
+var name;
+var surname;
+var email;
 document.getElementById("boton1").onclick=comprobarSettings;
+
+
 function comprobarSettings(){
 
 
      numeroPuntos=document.getElementById("numeroPuntos").value;
-
      colorFondo=document.getElementById("colorFondo").value;
-
      dificultad=document.getElementById("dificultad").value;
      sonido=document.getElementById("sonido").value;
     if (validacion() == true);
@@ -30,8 +31,10 @@ function comprobarSettings(){
         ArraySettings.push(dificultad);
         ArraySettings.push(sonido);
     }
-    console.log(" Array  settings en formulario" ,ArraySettings);
-    console.log("estoy en settings");
+
+
+
+
 
 
 }
@@ -59,3 +62,5 @@ else if (dificultad===0) {
    return true;
 
 }
+
+
