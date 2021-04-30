@@ -6,16 +6,19 @@ var bolita;
 var game;
 var img;
 var img2;
+var song;
+var song2;
 
 import {timer} from "./marcador.js" ;
-import {ArraySettings,colorFondo,numeroPuntos,dificultad} from "./formulario.js" ;
+import {ArraySettings,colorFondo,numeroPuntos,dificultad,sonido} from "./formulario.js" ;
 
 
 const s = (p) => {
 
 
     p.preload = function () {
-
+        song=p.loadSound('images/assets/juegoTronos.mp3');
+        song2=p.loadSound('images/assets/TubularBells.mp3');
         //Aquí sólo haremos un newGame
 
         jug1 = new Player(p,"jugador1");
@@ -26,16 +29,23 @@ const s = (p) => {
       //  game= new Game(p,2,10); // en un futuro haremos el new Game
     }
     p.setup = function () {
+
         img=p.loadImage('images/assets/desierto.png');
         img2=p.loadImage('images/assets/galactico.png');
+
         p.createCanvas(700,900);
 
-        bolita.empezarJuego(p); //VER ESTO
-        console.log(" console Array ",ArraySettings);
+        bolita.empezarJuego(p);
+
 
     }
     p.draw = function () {
-
+        if(sonido==1){
+            song.loop();
+            console.log("onido", sonido);
+        }else if (sonido==2){
+            song2.loop();
+        }
      /*   if(araystrns[0] == true){
             puedo jugar
 
@@ -138,6 +148,7 @@ const s = (p) => {
 
 
     }
+
     function reiniciarPartida(){
         p.noLoop();
         jug1.posicionInicial('jugador1');
@@ -145,6 +156,7 @@ const s = (p) => {
         bolita.empezarJuego(p);
         jug1.points=0;
         jug2.points =0;
+
 
 
         p.loop();

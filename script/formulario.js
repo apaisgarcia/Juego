@@ -4,7 +4,7 @@ export var ArraySettings=[];
 export var numeroPuntos;
 export var colorFondo;
 export var dificultad;
-var sonido;
+export var sonido;
 var fname;
 var lname;
 document.getElementById("boton1").onclick=comprobarSettings;
