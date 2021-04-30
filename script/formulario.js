@@ -1,7 +1,7 @@
 
 export var ArraySettings=[];
 
-export var numeroJugadores;
+export var numeroPuntos;
 export var colorFondo;
 export var dificultad;
 var sonido;
@@ -11,21 +11,21 @@ document.getElementById("boton1").onclick=comprobarSettings;
 function comprobarSettings(){
 
 
-     numeroJugadores=document.getElementById("numeroJugadores").value;
-     console.log("num ju", numeroJugadores);
+     numeroPuntos=document.getElementById("numeroPuntos").value;
+
      colorFondo=document.getElementById("colorFondo").value;
-    console.log("color fondo" , colorFondo);
+
      dificultad=document.getElementById("dificultad").value;
      sonido=document.getElementById("sonido").value;
     if (validacion() == true);
     {
         document.getElementById("colorFondo").disabled = true;
-        document.getElementById("numeroJugadores").disabled = true;
+        document.getElementById("numeroPuntos").disabled = true;
         document.getElementById("dificultad").disabled = true;
         document.getElementById("sonido").disabled = true;
         document.getElementById("boton1").disabled = true;
         ArraySettings.push(false);
-        ArraySettings.push(numeroJugadores);
+        ArraySettings.push(numeroPuntos);
         ArraySettings.push(colorFondo);
         ArraySettings.push(dificultad);
         ArraySettings.push(sonido);
@@ -37,7 +37,7 @@ function comprobarSettings(){
 }
 function validacion(){
 
-    if ( numeroJugadores===0) {
+    if ( numeroPuntos===0) {
         // Se a condición non se cumpre ...
         alert ('el campo debe tener un valor');
         return false;

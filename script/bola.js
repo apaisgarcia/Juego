@@ -1,5 +1,7 @@
 
-const SPEED_BALL =3;
+
+    const SPEED_BALL = 3;
+
 
 class Bola{
 

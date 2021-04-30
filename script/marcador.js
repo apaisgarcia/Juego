@@ -1,8 +1,8 @@
 import {jug1,jug2} from "./sketch.js";
-
+export var timer;
 const r = (p) => {
 
-var timer=0;
+   timer=0;
     p.preload = function () {
     }
     p.setup = function () {
@@ -40,6 +40,7 @@ function pantallaPuntuar() {
     p.fill(0, 102, 153);
     p.text("Time:", 85, 650);
     if ((p.frameCount % 60 === 0) && timer >= 0) {
+
         timer++;
     }
    let strtimer=timer.toFixed(2);

@@ -3,6 +3,7 @@ const POINTS=0;
 const HEIGHT=110;
 const WIDTH=80;
 const VELOCIDAD=10;
+
 class Player {
     constructor(p,strPlayer) {
         this.name = name;
@@ -43,15 +44,16 @@ class Player {
         }
 
     }
-    moveLeft() {
+    moveLeft(velocidad) {
+
         if(this.spritePlayer.position.x >this.spritePlayer.width/2) {
             this.spritePlayer.mirrorX(-1);
             this.spritePlayer.position.x = this.spritePlayer.position.x - this.velocidad;
         }
     }
 
-    moveRight(p) {
-
+    moveRight(p,velocidad) {
+    console.log("velocidad class", velocidad);
         if(this.spritePlayer.position.x < p.width - this.spritePlayer.width/2) {
             this.spritePlayer.mirrorX(+1);
             this.spritePlayer.position.x = this.spritePlayer.position.x + this.velocidad;
