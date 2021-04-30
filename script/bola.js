@@ -1,5 +1,5 @@
 
-const SPEED_BALL =5;
+const SPEED_BALL =3;
 
 class Bola{
 
@@ -15,6 +15,8 @@ class Bola{
     }
 
     empezarJuego(p){
+
+            this.speed = SPEED_BALL;
 
         this.spriteBola.position.x =p.width/2;
         this.spriteBola.position.y =p.height/2;

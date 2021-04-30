@@ -1,3 +1,4 @@
+import {jug1,jug2} from "./sketch.js";
 
 const r = (p) => {
 
@@ -14,12 +15,8 @@ var timer=0;
     p.fill(255);
     p.text("MARCADOR", 65, 80);
     pantallaPuntuar();
-    if(jug1.points===10){
-        let opcion = confirm("FELICIDADES , HAS GANADO !!! \n" +"PUNTUACIÓN : "+ jug1.points );
 
-    }else if (jug2.points===10){
-            let opcion = confirm("FELICIDADES , HAS GANADO !!! \n" +"PUNTUACIÓN : "+ jug1.points );
-        }
+
 
     }
 

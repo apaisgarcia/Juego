@@ -1,7 +1,10 @@
-var jug1 ;
-var jug2;
+export var jug1;
+export var jug2;
 var bolita;
 var game;
+import {ArraySettings,colorFondo,numeroJugadores,dificultad} from "./formulario.js";
+
+
 const s = (p) => {
 
 
@@ -17,23 +20,59 @@ const s = (p) => {
     p.setup = function () {
         p.createCanvas(700,900);
         bolita.empezarJuego(p); //VER ESTO
-
+        console.log(" console Array ",ArraySettings);
 
     }
     p.draw = function () {
 
-        p.background(155);
+     /*   if(araystrns[0] == true){
+            puedo jugar
+            todo
+        }
+        else if(dsfjdsklldfs == false)
+        {
+            fondo y mensaje con p.text
+        }*/
+       // console.log(" console Array draw ",ArraySettings);
+        if(colorFondo==1){
+            p.background(51);
+            console.log("valor c " ,colorFondo);
+        }else {
+            p.background(255, 204, 100);
+            console.log("valor " ,colorFondo);
+        }
 
         moverJugadores();
      //VER LO DE ABAJO
 
       if(bolita.collideBorder(p)===1){
           jug2.points++;
-          reiniciarPunto()
-          console.log( "Puntuacion Jugador Uno" ,jug2.points);
+          console.log("puntuacion 2", jug2.points);
+          if(jug2.points===10){
+             // let opcion = confirm("FELICIDADES  Player 2, HAS GANADO !!! \n" +"PUNTUACIÓN : "+ jug2.points );
+
+              setTimeout(confirm("FELICIDADES  Player 2, HAS GANADO !!! \n" +"PUNTUACIÓN : "+ jug2.points) , 1000);
+              //Gana jugador 2
+              reiniciarPartida();
+          }
+          else {
+
+              reiniciarPunto()
+          }
+
       }else if (bolita.collideBorder(p)===2){
           jug1.points++;
-          reiniciarPunto();
+          console.log("puntuacion 1", jug1.points);
+          if (jug1.points===10){
+            //  let opcion = confirm(" FELICIDADES Player 1 , HAS GANADO !!! \n" +" PUNTUACIÓN : "+ jug1.points );
+
+             // setTimeout(reiniciarPartida() , 2000);
+              setTimeout(confirm("FELICIDADES  Player 1, HAS GANADO !!! \n" +"PUNTUACIÓN : "+ jug1.points ) , 1000);
+              reiniciarPartida();
+          }else{
+              reiniciarPunto();
+          }
+
          console.log("Puntación Jugador Dos",jug1.points);
       }
       else if(bolita.collideBorder(p)===0){
@@ -57,6 +96,26 @@ const s = (p) => {
        p.drawSprites();
 
 
+
+    }
+    function reiniciarPartida(){
+        p.noLoop();
+        jug1.posicionInicial('jugador1');
+        jug2.posicionInicial('jugador2');
+        bolita.empezarJuego(p);
+        jug1.points=0;
+        jug2.points =0;
+
+
+
+
+
+
+
+
+
+
+        p.loop();
 
     }
     function reiniciarPunto(){
