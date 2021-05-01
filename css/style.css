@@ -55,7 +55,11 @@ ul {
 li {
     float: left;
 }
+.color{
+    color: white;
+    background: lightslategrey;
 
+}
 li a {
     display: block;
     color: white;
